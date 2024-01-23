@@ -1,0 +1,310 @@
+
+
+@font-face {
+    font-family: 'IhreSchriftart';
+    src: url('fonts/ZABARS/Zabars.ttf') format('truetype');
+}
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('screensaver/iStock-1499163884-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2em;
+    font-family: 'Zabras', sans-serif;
+}
+
+h1 {
+    font-size: 72px; 
+    font-family: 'Zabras', sans-serif;
+
+}
+
+#game-container {
+    position: relative;
+    width: 720px;
+    height: 480px;
+}
+
+#start-game-button {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    z-index: 10; 
+    cursor: pointer;
+}
+
+.endscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    margin-top: -40px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    z-index: 10; 
+    cursor: pointer;
+}
+
+.endscreen button {
+    padding: 10px 20px;
+    margin-top: 20px; 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#canvas {
+    width: 100%;
+}
+
+.startscreen , .winscreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startscreen button {
+    padding: 10px 20px;
+    font-size: 20px; 
+    cursor: pointer;
+    margin-top: 20px; 
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+}
+
+.startscreen img, .endscreen img, .winscreen img {
+    width: 100%;
+    height: 100%;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 20px; 
+    cursor: pointer;
+}
+
+#button-container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 100; 
+}
+
+#button-container button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+}
+
+.touch-controls {
+    display: none;
+}
+
+#game-container {
+    position: relative;
+}
+
+#restart-button, #backToMenuButton {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+#fullscreen {
+    position: absolute; 
+    top: 10px; 
+    right: 30px; 
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 5px;
+}
+
+#fullscreen img {
+    width: 30px; 
+    height: auto;
+}
+
+#sound {
+    position: absolute; 
+    top: 10px; 
+    right: 100px; 
+    background: transparent; 
+    border: none; 
+    cursor: pointer;
+    padding: 5px; 
+}
+
+#sound img {
+    width: 30px; 
+    height: auto; 
+}
+
+#start-game-button {
+    border: 2px solid black;
+    background-color: white; 
+    color: black; 
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 16px; 
+    cursor: pointer; 
+    background: transparent; 
+    font-size: 23px;
+    font-weight: 32px;
+}
+
+#backToMenuButton {
+
+    border: 2px solid black;
+    background-color: white; 
+    text-align: center;
+    display:flex;
+    font-size: 16px; 
+    cursor: pointer; 
+    font-size: 23px;
+    font-weight: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+#landscape {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+#landscape img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mobileButtons {
+    display: none;
+}
+
+@media only screen and (max-width: 770px) {
+
+    #landscape {
+        display: flex; 
+        flex-direction: column-reverse;   
+    }
+
+    #canvas, #start-game-button, #restartButton, #game-container {
+        display: none;
+    }
+
+    h3 {
+        display: none;
+    }
+
+    h4 {
+        font-size: 36px;
+        color: white;
+        font-family: 'Zabras', sans-serif;
+    }
+
+}
+
+@media only screen and (max-height: 480px) {
+
+    #game-container {
+        width: 100%; 
+        height: 100vh;
+        margin-bottom: 60px; 
+        display:block;
+    }
+    #canvas {
+        width: 100%;
+        height: 100vh;
+        display: block;
+    }
+
+    #landscape, h1, h3 {
+        display: none;
+    }
+
+    .touch-controls {
+        width: auto; 
+        height: auto;
+    }
+
+    #button-container {
+        display: block;
+    }
+
+    .mobileButtons {
+        display: flex; 
+        justify-content: space-between; 
+        position: absolute;
+        bottom: 10px; 
+        left: 0;
+        right: 0;
+    }
+
+    .touch-btn {
+        width: 50px; 
+        height: 50px; 
+        margin: 0px 28px; 
+        background: transparent; 
+        border:none;
+    }
+
+    .touch-btn img {
+        width: 100%; 
+        height: auto; 
+    }
+
+}
+
+
+/* @media (pointer: coarse) {
+    .mobileButtons {
+        display: flex;
+    }
+} */
+
