@@ -35,7 +35,7 @@ function toggleSoundActive() {
 
 function updateSoundButtonIcon() {
     // Aktualisiert das Sound-Icon
-    const soundIcon = soundActive ? 'icons/volume.png' : 'icons/volume-off-indicator.png';
+    const soundIcon = soundActive ? 'icons/sound.png' : 'icons/soundoff.png';
     document.getElementById('sound-img').src = soundIcon;
 }
 
