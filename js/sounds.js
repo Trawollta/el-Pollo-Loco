@@ -23,6 +23,7 @@ function playAudio(audio) {
         audio.play();
     }
 }
+
 /**
  * Updates the sound button icon based on the current sound state
  */
@@ -35,7 +36,8 @@ function toggleSoundActive() {
 
 function updateSoundButtonIcon() {
     // Aktualisiert das Sound-Icon
-    const soundIcon = soundActive ? 'icons/sound.png' : 'icons/soundoff.png';
+    const soundIcon = soundActive ? 'icons/soundon.png' : 'icons/soundoff.png';
+    console.log('button')
     document.getElementById('sound-img').src = soundIcon;
 }
 
